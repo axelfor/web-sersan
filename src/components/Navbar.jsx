@@ -30,23 +30,26 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? 'bg-white/95 backdrop-blur-md shadow-md'
-                    : 'bg-transparent'
+                ? 'bg-white/95 backdrop-blur-md shadow-md'
+                : 'bg-transparent'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 lg:h-20">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center gap-2 group" aria-label="Beranda Koperasi SERSAN">
-                        {/* Temporary wave icon – replace with official logo later */}
-                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${scrolled ? 'bg-ocean-900' : 'bg-white/20 backdrop-blur-sm'}`}>
-                            <Icons.waves className={`w-5 h-5 ${scrolled ? 'text-white' : 'text-white'}`} />
+                    <Link to="/" className="flex items-center gap-2 lg:gap-3 group" aria-label="Beranda Koperasi SERSAN">
+                        <div className="w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center shrink-0">
+                            <img
+                                src="/logo.png"
+                                alt="Logo Koperasi Nelayan SERSAN"
+                                className="w-full h-full object-contain drop-shadow-sm"
+                            />
                         </div>
-                        <div>
-                            <span className={`text-lg font-bold tracking-tight transition-colors ${scrolled ? 'text-ocean-900' : 'text-white'}`}>
+                        <div className="flex flex-col justify-center">
+                            <span className={`text-lg lg:text-xl font-bold tracking-tight transition-colors ${scrolled ? 'text-ocean-900' : 'text-white'}`}>
                                 SERSAN
                             </span>
-                            <span className={`block text-[10px] leading-tight font-medium transition-colors ${scrolled ? 'text-ocean-600' : 'text-white/80'}`}>
+                            <span className={`block text-[10px] lg:text-xs leading-tight font-medium transition-colors ${scrolled ? 'text-ocean-600' : 'text-white/80'}`}>
                                 Sejahtera Mandiri Bersama Nelayan
                             </span>
                         </div>
@@ -59,12 +62,12 @@ export default function Navbar() {
                                 key={link.to}
                                 to={link.to}
                                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${location.pathname === link.to
-                                        ? scrolled
-                                            ? 'text-ocean-900 bg-ocean-50'
-                                            : 'text-white bg-white/15'
-                                        : scrolled
-                                            ? 'text-navy-800 hover:text-ocean-700 hover:bg-ocean-50'
-                                            : 'text-white/90 hover:text-white hover:bg-white/10'
+                                    ? scrolled
+                                        ? 'text-ocean-900 bg-ocean-50'
+                                        : 'text-white bg-white/15'
+                                    : scrolled
+                                        ? 'text-navy-800 hover:text-ocean-700 hover:bg-ocean-50'
+                                        : 'text-white/90 hover:text-white hover:bg-white/10'
                                     }`}
                             >
                                 {link.label}
@@ -102,8 +105,8 @@ export default function Navbar() {
                             key={link.to}
                             to={link.to}
                             className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${location.pathname === link.to
-                                    ? 'text-ocean-900 bg-ocean-50'
-                                    : 'text-navy-800 hover:bg-ocean-50 hover:text-ocean-700'
+                                ? 'text-ocean-900 bg-ocean-50'
+                                : 'text-navy-800 hover:bg-ocean-50 hover:text-ocean-700'
                                 }`}
                         >
                             {link.label}

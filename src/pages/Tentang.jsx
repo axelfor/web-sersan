@@ -7,7 +7,7 @@ const misi = [
     'Memberdayakan nelayan untuk mencapai kemandirian ekonomi.',
     'Mengembangkan potensi hasil laut menjadi produk bernilai tambah.',
     'Meningkatkan keterampilan dan pengetahuan anggota koperasi.',
-    'Membangun jaringan kerja sama yang saling menguntungkan.',
+    'Membangun jaringan kerja sama yang saling menguntungkan bersama Kampung Nelayan Merah Putih dan ekosistem koperasi.',
     'Mendukung kelestarian sumber daya laut dan lingkungan pesisir.',
 ];
 
