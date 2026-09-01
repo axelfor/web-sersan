@@ -149,7 +149,7 @@ export default function Beranda() {
                         </div>
                         <div className="fade-up relative">
                             <img
-                                src="https://images.unsplash.com/photo-1545816250-e12bedaf73c4?w=600&h=400&fit=crop"
+                                src="/images/tampilan.webp"
                                 alt="Nelayan dan kapal tradisional"
                                 className="w-full rounded-card shadow-elevated object-cover aspect-[4/3]"
                                 loading="lazy"
@@ -267,7 +267,7 @@ export default function Beranda() {
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         <div className="fade-up order-2 lg:order-1">
                             <img
-                                src="https://images.unsplash.com/photo-1559827291-bae7eb3e4060?w=600&h=400&fit=crop"
+                                src="/images/pict5.webp"
                                 alt="Komunitas nelayan pesisir"
                                 className="w-full rounded-card shadow-elevated object-cover aspect-[4/3]"
                                 loading="lazy"
