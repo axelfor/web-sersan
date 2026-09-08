@@ -44,18 +44,18 @@ export default function Kontak() {
     const contactInfo = [
         {
             icon: 'mapPin',
-            title: 'Alamat Kantor',
-            content: '[Alamat akan diperbarui] Jl. Pesisir Pantai No. xx, Desa Nelayan, Kabupaten xx, Provinsi xx',
+            title: 'Alamat Koperasi',
+            content: 'Alamat Jl. Raya Rum-soasio, Kel. Rum Kec. Tidore Utara kota Tidore Kepulauan',
         },
         {
             icon: 'phone',
             title: 'Nomor Telepon & WhatsApp',
-            content: '08xxxxxxxxxx',
+            content: '0852-4267-5534',
         },
         {
             icon: 'mail',
             title: 'Email Resmi',
-            content: 'email@koperasisersan.id',
+            content: 'koperasisersan16@gmail.com',
         },
         {
             icon: 'clock',
@@ -269,14 +269,20 @@ export default function Kontak() {
             </section>
 
             {/* Map Placeholder Area */}
+            {/* Google Maps */}
             <section className="bg-white pb-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="fade-up w-full h-[400px] bg-ocean-50 border border-ocean-100 rounded-card flex flex-col items-center justify-center text-center p-6 mt-16">
-                        <Icons.mapPin className="w-12 h-12 text-ocean-300 mb-4" />
-                        <h3 className="text-lg font-bold text-navy-900 mb-2">Lokasi Koperasi (Peta Google Maps)</h3>
-                        <p className="text-sm text-navy-800/60 max-w-md mx-auto">
-                            [Area ini disediakan untuk embed Google Maps menuju lokasi Koperasi Nelayan SERSAN. Saat ini menggunakan placeholder.]
-                        </p>
+                    <div className="fade-up w-full h-[400px] mt-16 rounded-card overflow-hidden border border-ocean-100">
+                        <iframe
+                            src="https://www.google.com/maps?q=Jl.%20Raya%20Rum-soasio,%20Kel.%20Rum,%20Kec.%20Tidore%20Utara,%20Kota%20Tidore%20Kepulauan&output=embed"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Lokasi Koperasi Nelayan SERSAN"
+                        ></iframe>
                     </div>
                 </div>
             </section>

@@ -69,15 +69,15 @@ export default function Footer() {
                         <ul className="space-y-3">
                             <li className="flex items-start gap-3">
                                 <Icons.mapPin className="w-4 h-4 text-ocean-400 mt-0.5 shrink-0" />
-                                <span className="text-sm text-ocean-200">[Alamat akan diperbarui]</span>
+                                <span className="text-sm text-ocean-200">Alamat Jl. Raya Rum-soasio, Kel. Rum Kec. Tidore Utara kota Tidore Kepulauan</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <Icons.phone className="w-4 h-4 text-ocean-400 mt-0.5 shrink-0" />
-                                <span className="text-sm text-ocean-200">08xxxxxxxxxx</span>
+                                <span className="text-sm text-ocean-200">0852-4267-5534</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <Icons.mail className="w-4 h-4 text-ocean-400 mt-0.5 shrink-0" />
-                                <span className="text-sm text-ocean-200">email@koperasisersan.id</span>
+                                <span className="text-sm text-ocean-200">koperasisersan16@gmail.com</span>
                             </li>
                         </ul>
                     </div>
