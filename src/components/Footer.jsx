@@ -11,9 +11,9 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-    { icon: 'instagram', label: 'Instagram', href: '#' },
-    { icon: 'facebook', label: 'Facebook', href: '#' },
-    { icon: 'youtube', label: 'YouTube', href: '#' },
+    { icon: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/koperasisersan16' },
+    { icon: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/share/1QzFNtcgwM/' },
+    { icon: 'youtube', label: 'YouTube', href: 'https://youtube.com/@koperasinelayan16?si=PCnrViR815h2APGD' },
 ];
 
 export default function Footer() {

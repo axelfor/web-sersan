@@ -110,17 +110,33 @@ export default function Kontak() {
                             </div>
 
                             {/* Social Media placeholders */}
+                            {/* Social Media */}
                             <div className="fade-up pt-8 border-t border-ocean-100">
                                 <h3 className="text-sm font-semibold text-navy-900 mb-4">Media Sosial Kami</h3>
                                 <div className="flex gap-3">
-                                    {['instagram', 'facebook', 'youtube'].map((social) => {
-                                        const IconComponent = Icons[social];
+                                    {[
+                                        { 
+                                            name: 'instagram', 
+                                            url: 'https://www.instagram.com/koperasisersan16' 
+                                        },
+                                        { 
+                                            name: 'facebook', 
+                                            url: 'https://www.facebook.com/share/1QzFNtcgwM/' 
+                                        },
+                                        { 
+                                            name: 'youtube', 
+                                            url: 'https://youtube.com/@koperasinelayan16?si=PCnrViR815h2APGD' 
+                                        },
+                                    ].map((social) => {
+                                        const IconComponent = Icons[social.name];
                                         return (
                                             <a
-                                                key={social}
-                                                href="#"
+                                                key={social.name}
+                                                href={social.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                                 className="w-10 h-10 rounded-lg bg-ocean-50 hover:bg-ocean-600 border border-ocean-100 hover:border-transparent flex items-center justify-center text-ocean-700 hover:text-white transition-all shadow-sm"
-                                                aria-label={social}
+                                                aria-label={social.name}
                                             >
                                                 <IconComponent className="w-5 h-5" />
                                             </a>
