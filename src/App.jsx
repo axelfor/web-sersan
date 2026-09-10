@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 // Pages
 import Beranda from './pages/Beranda';
@@ -31,6 +32,7 @@ function App() {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-white">
         <Navbar />
+        <FloatingWhatsApp />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Beranda />} />

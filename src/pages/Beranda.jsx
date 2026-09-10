@@ -5,8 +5,13 @@ import ProductCard from '../components/ProductCard';
 import ArticleCard from '../components/ArticleCard';
 import CTASection from '../components/CTASection';
 import Icons from '../components/Icons';
+import ImagePlaceholder from '../components/ImagePlaceholder';
 import products from '../data/products';
 import articles from '../data/articles';
+
+const WA_NUMBER = '6285242675534';
+const WA_MESSAGE = 'Halo, saya ingin tanya mengenai produk ikan dari Koperasi SERSAN 🐟';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`;
 
 const values = [
     {
@@ -32,10 +37,10 @@ const values = [
 ];
 
 const trustPoints = [
-    'Berbasis pada semangat kebersamaan',
-    'Mendukung kesejahteraan nelayan',
-    'Mengembangkan potensi hasil laut',
-    'Berorientasi pada keberlanjutan',
+    'Langsung dari nelayan, tanpa perantara — harga lebih terjangkau',
+    'Ikan segar ditangkap hari ini, dikirim langsung ke tangan Anda',
+    'Tuna & ikan pelagis grade ekspor — kualitas terjaga sejak laut',
+    'Melayani pemesanan via WhatsApp — cepat, mudah, terpercaya',
 ];
 
 const programPreview = [
@@ -93,29 +98,34 @@ export default function Beranda() {
                         </div>
 
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                            Sejahtera Bersama,{' '}
+                            Ikan Segar{' '}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-ocean-300 to-teal-300">
-                                Tumbuh Bersama Nelayan.
+                                Langsung dari Nelayan.
                             </span>
                         </h1>
 
                         <p className="mt-6 text-base sm:text-lg text-ocean-100 leading-relaxed max-w-xl">
-                            Koperasi Nelayan SERSAN hadir untuk mendorong kemandirian, pemberdayaan, dan peningkatan kesejahteraan nelayan melalui kerja sama yang berkelanjutan.
+                            Koperasi Nelayan SERSAN menyediakan ikan tuna, cakalang, tongkol, udang, dan hasil laut segar lainnya — langsung dari tangkapan nelayan Tidore ke meja makan Anda. Tanpa perantara, harga lebih jujur.
                         </p>
 
                         <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                            <a
+                                href={WA_LINK}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-green-500 hover:bg-green-400 text-white font-semibold rounded-lg transition-all hover:shadow-lg text-sm"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                                Pesan via WhatsApp
+                            </a>
                             <Link
                                 to="/produk"
-                                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-ocean-500 hover:bg-ocean-400 text-white font-semibold rounded-lg transition-all hover:shadow-lg text-sm"
+                                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all text-sm"
                             >
                                 Lihat Produk
                                 <Icons.arrowRight className="w-4 h-4" />
-                            </Link>
-                            <Link
-                                to="/tentang"
-                                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all text-sm"
-                            >
-                                Tentang Kami
                             </Link>
                         </div>
                     </div>
@@ -150,9 +160,8 @@ export default function Beranda() {
                         <div className="fade-up relative">
                             <img
                                 src="/images/tampilan.webp"
-                                alt="Nelayan dan kapal tradisional"
-                                className="w-full rounded-card shadow-elevated object-cover aspect-[4/3]"
-                                loading="lazy"
+                                alt="nelayan"
+                                className="w-full aspect-[4/3] object-cover rounded-card"
                             />
                             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-ocean-100 rounded-card -z-10" />
                             <div className="absolute -top-4 -right-4 w-16 h-16 bg-teal-100 rounded-card -z-10" />
@@ -267,21 +276,20 @@ export default function Beranda() {
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         <div className="fade-up order-2 lg:order-1">
                             <img
-                                src="/images/pict5.webp"
-                                alt="Komunitas nelayan pesisir"
-                                className="w-full rounded-card shadow-elevated object-cover aspect-[4/3]"
-                                loading="lazy"
+                                src="/images/fotoikan.webp"
+                                alt="nelayan"
+                                className="w-full aspect-[4/3] object-cover rounded-card"
                             />
                         </div>
                         <div className="fade-up order-1 lg:order-2">
                             <span className="inline-block text-sm font-semibold uppercase tracking-wider text-ocean-600 mb-2">
-                                Kepercayaan
+                                Kenapa Beli di Sini?
                             </span>
                             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-900 leading-tight">
-                                Mengapa Memilih Koperasi SERSAN?
+                                Ikan Terbaik, Harga Paling Jujur.
                             </h2>
                             <p className="mt-4 text-navy-800/70 leading-relaxed">
-                                Koperasi Nelayan SERSAN dibangun atas dasar semangat gotong royong dan komitmen untuk kemajuan bersama masyarakat nelayan.
+                                Kami bukan tengkulak. Kami adalah koperasi yang mempertemukan Anda langsung dengan nelayan penangkap ikan. Tidak ada markup berlapis — hanya ikan segar dan harga yang adil.
                             </p>
                             <ul className="mt-6 space-y-3">
                                 {trustPoints.map((point, i) => (
@@ -293,6 +301,17 @@ export default function Beranda() {
                                     </li>
                                 ))}
                             </ul>
+                            <a
+                                href={WA_LINK}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-8 inline-flex items-center gap-2 px-7 py-3.5 bg-green-500 hover:bg-green-400 text-white font-semibold rounded-lg transition-all hover:shadow-lg text-sm"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                                Tanya Stok & Harga via WA
+                            </a>
                         </div>
                     </div>
                 </div>
